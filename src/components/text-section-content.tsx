@@ -1,9 +1,11 @@
+import './text-section-content.scss';
+
 type TextSectionContentProps = {
     children: React.ReactNode
 };
 
 const TextSectionContent = ({children}: TextSectionContentProps) => {
-    return <p>
+    return <p className='text-section-content'>
         {children}
     </p>
 }

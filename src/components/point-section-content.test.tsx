@@ -7,4 +7,6 @@ test('renders correctly', () => {
             <Point>Test</Point>
         </PointSectionContent>
     );
+    const pointElement = screen.getByText('Test');
+    expect(pointElement).toBeInTheDocument();
 });

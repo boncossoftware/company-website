@@ -1,13 +1,17 @@
+import './section.scss';
+
 type Props = {
-    title: String | null;
+    title?: String;
     children?: React.ReactNode;
 }
 
-const Section = ({title='', children}:Props) => {
-    return <section>
-        <h2>{title}</h2>
-        <div>
-            {children}
+const Section = ({title, children}:Props) => {
+    return <section className='section'>
+        <div className='section-inner-container'>
+            {title && <h2 className='section-title'>{title}</h2>}
+            <div className='section-content'>
+                {children}
+            </div>
         </div>
     </section>
 }

@@ -1,0 +1,52 @@
+$breakpoint-small: 480px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1260px;
+
+$padding-small: 10px;
+$padding-medium: 15px;
+$padding-large: 20px;
+
+@mixin default-padding {
+    padding: var(--padding-small);
+    @media (min-width: $breakpoint-small) {
+        padding: var(--padding-medium);
+    }
+    @media (min-width: $breakpoint-medium) {
+        padding: var(--padding-large);
+    }
+}
+
+:root {
+    --width-small: 480px;
+    --width-medium: 960px;
+    --width-large: 1260px;
+
+    --padding-small: 15px;
+    --padding-medium: 20px;
+    --padding-large: 25px;
+
+    --color-primary: #1b7aaa;
+    --color-text: rgb(48, 48, 48);
+    --color-label: rgb(66, 66, 66);
+
+    --font-size-small: 13pt;
+    --font-size-medium: 15pt;
+    --font-size-large: 18pt;
+
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  min-width: 280px;
+  color: var(--color-text);
+}
+

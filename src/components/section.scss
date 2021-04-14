@@ -1,0 +1,29 @@
+@import '../index';
+
+.section {
+    @include default-padding;
+
+    display: flex;
+    justify-content: center;
+
+    & + .section {
+        margin-top: calc(2 * var(--spacing-large));
+    }
+    & + .section:last-of-type {
+        margin-bottom: calc(5 * var(--spacing-large));
+    }
+        
+    .section-inner-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        max-width: var(--width-medium);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-small);
+        color: var(--color-label);
+        margin-bottom: var(--padding-small);
+    }
+}

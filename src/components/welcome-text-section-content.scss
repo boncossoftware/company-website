@@ -1,0 +1,22 @@
+@import './header';
+@import '../index';
+
+.welcome-text-section-content {
+    font-size: 130pt;
+    margin: 0px;
+    
+    height: calc(100vh - calc(2 * #{$header-height-small}) - calc(2 * #{$padding-small}));
+    @media(min-width: $breakpoint-small) {
+        height: calc(100vh - calc(2 * #{$header-height-medium}) - calc(2 * #{$padding-medium}));
+    }
+    @media(min-width: $breakpoint-medium) {
+        height: calc(100vh - calc(2 * #{$header-height-large}) - calc(2 * #{$padding-large}));
+    }
+    max-height: 736px;
+
+    padding-bottom: $header-height-small;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

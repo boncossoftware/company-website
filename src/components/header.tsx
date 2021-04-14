@@ -1,8 +1,9 @@
 import Logo from 'assets/img/logo2018.jpg';
+import './header.scss';
 
 const Header = () => {
-    return <>
-        <img src={Logo} alt="boncos logo" />
-    </>
+    return <header className="header">
+        <img src={Logo} alt="boncos logo" className="header-image"/>
+    </header>
 }
 export default Header;

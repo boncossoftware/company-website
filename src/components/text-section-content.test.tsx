@@ -7,4 +7,6 @@ test('renders correctly', () => {
             Test
         </TextSectionContent>
     );
+    const contentElement = screen.getByText('Test');
+    expect(contentElement).toBeInTheDocument();
 });

@@ -3,9 +3,16 @@ import Section from 'components/section';
 import PointSectionContent, {Point} from 'components/point-section-content';
 import TextSectionContent from 'components/text-section-content';
 import Logo from 'assets/img/logo2018.jpg';
+import LogoDark from 'assets/img/logo2018_dark.jpg';
 import {FaEnvelope, FaGithub, FaWhatsapp} from 'react-icons/fa';
 
 const Home = () => {
+
+    const renderImage = () => {
+        const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
+        return <img src={matchDark ? LogoDark : Logo} alt='boncos'/>;
+    }
+
     return <>
         <Section>
             <WelcomeTextSectionContent text="Hi" />
@@ -28,7 +35,7 @@ const Home = () => {
                 have to but because we want to, love to or need 
                 to. We take leaps of faiths on a regular basis 
                 to achieve our goals and inspire people around 
-                us in the process. We are <img src={Logo} alt='boncos'/>.
+                us in the process. We are {renderImage()}.
             </TextSectionContent>
         </Section>
 

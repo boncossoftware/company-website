@@ -1,0 +1,64 @@
+@import '../index';
+
+.footer {
+    display: flex;
+    justify-content: center;
+    
+    .footer-inner-container {
+        @include default-padding;
+
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        flex-wrap: wrap;
+
+        max-width: var(--width-medium);
+
+        span {
+            font-size: var(--font-size-tiny);
+            text-align: center;
+            margin-bottom: var(--spacing-small);
+            color: var(--color-label);
+        }
+        span+span {
+            margin-left: var(--spacing-small);
+            padding-left: var(--spacing-small);
+            border-left: 1px lightgrey solid;
+        }
+        
+        .copyright {
+            flex: 1;
+            flex-basis: var(--width-medium);
+
+            @media (min-width: $breakpoint-medium) {
+                flex-basis: unset;
+                text-align: left;
+            }
+        }
+
+        .chamber {
+            justify-self: center;
+        }
+
+        .place {
+            justify-self: center;
+
+            @media (min-width: $breakpoint-medium) {
+                text-align: right;
+            }
+        }
+        
+        hr {
+            margin: 0px;
+            position: absolute;
+            border-color: var(--color-background);
+            background: #fff;
+            opacity: 0.5;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+        }
+    }
+}

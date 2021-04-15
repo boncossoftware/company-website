@@ -5,7 +5,7 @@ import './header.scss';
 const Header = () => {
     const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
     return <header className="header">
-        <img src={matchDark ? LogoDark : Logo} alt="boncos logo" className="header-image"/>
+        <img src={matchDark.matches ? LogoDark : Logo} alt="boncos logo" className="header-image"/>
     </header>
 }
 export default Header;

@@ -10,7 +10,7 @@ const Home = () => {
 
     const renderImage = () => {
         const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
-        return <img src={matchDark ? LogoDark : Logo} alt='boncos'/>;
+        return <img src={matchDark.matches ? LogoDark : Logo} alt='boncos'/>;
     }
 
     return <>

@@ -10,7 +10,7 @@ const Home = () => {
 
     const renderImage = () => {
         const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
-        return <img src={matchDark ? LogoDark : Logo} alt='boncos'/>;
+        return <img src={matchDark.matches ? LogoDark : Logo} alt='boncos'/>;
     }
 
     return <>
@@ -33,7 +33,7 @@ const Home = () => {
             <TextSectionContent >
                 We do things, not because we 
                 have to but because we want to, love to or need 
-                to. We take leaps of faiths on a regular basis 
+                to. We take leaps of faith on a regular basis 
                 to achieve our goals and inspire people around 
                 us in the process. We are {renderImage()}.
             </TextSectionContent>

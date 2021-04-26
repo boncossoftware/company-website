@@ -53,12 +53,6 @@ const Home = () => {
                 >
                     github.com/boncossoftware
                 </Point>
-                <Point 
-                    icon={FaWhatsapp}
-                    url='https://wa.me/2977322515?text=Hi%2C%20lets%20make%20software%21'
-                >
-                    +297 7322515
-                </Point>
             </PointSectionContent>
         </Section>
     </>

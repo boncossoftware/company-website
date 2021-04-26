@@ -4,7 +4,7 @@ import PointSectionContent, {Point} from 'components/point-section-content';
 import TextSectionContent from 'components/text-section-content';
 import Logo from 'assets/img/logo2018.jpg';
 import LogoDark from 'assets/img/logo2018_dark.jpg';
-import {FaEnvelope, FaGithub, FaWhatsapp} from 'react-icons/fa';
+import {FaEnvelope, FaGithub} from 'react-icons/fa';
 
 const Home = () => {
 

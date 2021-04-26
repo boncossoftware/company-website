@@ -4,7 +4,7 @@ import PointSectionContent, {Point} from 'components/point-section-content';
 import TextSectionContent from 'components/text-section-content';
 import Logo from 'assets/img/logo2018.jpg';
 import LogoDark from 'assets/img/logo2018_dark.jpg';
-import {FaEnvelope, FaGithub, FaWhatsapp} from 'react-icons/fa';
+import {FaEnvelope, FaGithub} from 'react-icons/fa';
 
 const Home = () => {
 
@@ -52,12 +52,6 @@ const Home = () => {
                     url='https://github.com/boncossoftware'
                 >
                     github.com/boncossoftware
-                </Point>
-                <Point 
-                    icon={FaWhatsapp}
-                    url='https://wa.me/2977322515?text=Hi%2C%20lets%20make%20software%21'
-                >
-                    +297 7322515
                 </Point>
             </PointSectionContent>
         </Section>

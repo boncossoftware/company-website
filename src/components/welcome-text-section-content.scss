@@ -5,12 +5,12 @@
     font-size: 130pt;
     margin: 0px;
     
-    height: calc(100vh - calc(2 * #{$header-height-small}) - calc(2 * #{$padding-small}));
+    height: calc(100vh - calc(2 * #{$header-height-small}) - calc(3 * #{$padding-small}));
     @media(min-width: $breakpoint-small) {
-        height: calc(100vh - calc(2 * #{$header-height-medium}) - calc(2 * #{$padding-medium}));
+        height: calc(100vh - calc(2 * #{$header-height-medium}) - calc(3 * #{$padding-medium}));
     }
     @media(min-width: $breakpoint-medium) {
-        height: calc(100vh - calc(2 * #{$header-height-large}) - calc(2 * #{$padding-large}));
+        height: calc(100vh - calc(2 * #{$header-height-large}) - calc(3 * #{$padding-large}));
     }
     max-height: 736px;
 

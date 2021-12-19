@@ -15,7 +15,7 @@ const Home = () => {
         <Section title='We do'>
             <PointSectionContent>
                 <Point lg>Apps &amp;<br/>Websites</Point>
-                <Point lg>Data<br/>Sience</Point>
+                <Point lg>Data<br/>Science</Point>
                 <Point lg>Management<br/>Systems</Point>
                 <Point lg>Process<br/>Automation</Point>
                 <Point lg>Operations<br/>Optimization</Point>

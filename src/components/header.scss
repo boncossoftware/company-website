@@ -1,22 +1,22 @@
-@import '../index';
+@use "../index" as *;
 
 $header-height-small: 30px;
 $header-height-medium: 35px;
 $header-height-large: 40px;
 
 .header {
-    display: flex;
-    justify-content: center;
-    
-    @include default-padding;
+  display: flex;
+  justify-content: center;
 
-    .header-image {
-        height: $header-height-small;
-        @media (min-width: $breakpoint-small) {
-            height: $header-height-medium;
-        }
-        @media (min-width: $breakpoint-medium) {
-            height: $header-height-large;
-        }
+  @include default-padding;
+
+  .header-image {
+    height: $header-height-small;
+    @media (min-width: $breakpoint-small) {
+      height: $header-height-medium;
     }
+    @media (min-width: $breakpoint-medium) {
+      height: $header-height-large;
+    }
+  }
 }

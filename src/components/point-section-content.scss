@@ -1,78 +1,76 @@
-@import '../index';
+@use "../index" as *;
 
 .point-section-content {
-    
+  display: grid;
 
-    display: grid;
-    
-    grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+
+  @media (min-width: $breakpoint-small) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  margin: 0px;
+  padding: 0px;
+
+  &.double-spacing {
+    grid-template-columns: auto;
     grid-template-rows: auto;
-    
-    @media(min-width: $breakpoint-small) {
-        grid-template-columns: auto auto auto;
+
+    @media (min-width: $breakpoint-medium) {
+      grid-template-columns: auto auto auto;
+    }
+  }
+
+  a.point-section-content-point {
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+
+  .point-section-content-point {
+    justify-self: start;
+
+    list-style-type: none;
+
+    margin-right: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+
+    font-weight: 500;
+    font-size: var(--font-size-small);
+    line-height: 25px;
+    font-weight: 300;
+
+    @media (min-width: $breakpoint-medium) {
+      font-size: var(--font-size-medium);
     }
 
-    @media(min-width: $breakpoint-medium) {
-        grid-template-columns: auto auto auto auto auto auto;
+    & + .point-section-content-point:last-of-type {
+      margin-right: 0px;
     }
 
-    margin: 0px;
-    padding: 0px;
-
-    &.double-spacing {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        
-        @media(min-width: $breakpoint-medium) {
-            grid-template-columns: auto auto auto;
-        }
+    &.large {
+      font-size: var(--font-size-large);
+      line-height: 29px;
+      font-weight: 500;
     }
 
-    a.point-section-content-point {
-        text-decoration: none;
-        color: var(--color-primary);
+    .icon {
+      color: var(--color-text);
+
+      margin-right: var(--spacing-small);
+      margin-bottom: -2px;
+
+      @media (min-width: $breakpoint-small) {
+        margin-bottom: -2px;
+      }
+      @media (min-width: $breakpoint-medium) {
+        margin-right: var(--spacing-medium);
+        margin-bottom: -2px;
+      }
     }
-
-    .point-section-content-point {
-        justify-self: start;
-        
-        list-style-type: none;
-        
-        margin-right: var(--spacing-small);
-        margin-bottom: var(--spacing-small);
-
-        font-weight: 500;
-        font-size: var(--font-size-small);
-        line-height: 25px;
-        font-weight: 300;
-
-        @media(min-width: $breakpoint-medium) {
-            font-size: var(--font-size-medium);
-        }
-
-        & + .point-section-content-point:last-of-type {
-            margin-right: 0px;
-        }
-
-        &.large {
-            font-size: var(--font-size-large);
-            line-height: 29px;
-            font-weight: 500;
-        }
-
-        .icon {
-            color: var(--color-text);
-            
-            margin-right: var(--spacing-small);
-            margin-bottom: -2px;
-
-            @media (min-width: $breakpoint-small) {
-                margin-bottom: -2px;
-            }
-            @media (min-width: $breakpoint-medium) {
-                margin-right: var(--spacing-medium);
-                margin-bottom: -2px;
-            }
-        }
-    }
+  }
 }

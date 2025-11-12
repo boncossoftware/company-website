@@ -1,4 +1,4 @@
-import {IconType} from 'react-icons';
+import { IconType } from 'react-icons';
 import './point-section-content.scss';
 
 type PointProps = {
@@ -7,27 +7,27 @@ type PointProps = {
     icon?: IconType;
     url?: string;
 };
-export const Point = ({children, icon, lg, url}: PointProps) => {
+export const Point = ({ children, icon: IconComponent, lg, url }: PointProps) => {
     const classes = ['point-section-content-point'];
     (lg && classes.push('large'));
 
-    const Icon: IconType | undefined = icon;
-    const Container = url ? 
-        ((p:any) => 
-            <a 
-                href={url} 
-                target="_blank" 
+    const Container = url ?
+        ((p: any) =>
+            <a
+                href={url}
+                target="_blank"
                 rel="noopener noreferrer"
                 {...p}
             >
                 {p?.children}
             </a>
         )
-        : 
-        ((p:any) => <li {...p}>{p?.children}</li>)
-    ;
+        :
+        ((p: any) => <li {...p}>{p?.children}</li>)
+        ;
+    const IconElement = IconComponent as React.ComponentType<any>;
     return <Container className={classes.join(' ')}>
-        {Icon && <Icon className="icon" />}
+        {IconComponent && <IconElement className="icon" />}
         {children}
     </Container>
 }
@@ -37,7 +37,7 @@ type PointSectionContentProps = {
     children: React.ReactNode;
 };
 
-const PointSectionContent = ({children, doubleSpacing}: PointSectionContentProps) => {
+const PointSectionContent = ({ children, doubleSpacing }: PointSectionContentProps) => {
     const classes = ['point-section-content'];
     (doubleSpacing && classes.push('double-spacing'));
 

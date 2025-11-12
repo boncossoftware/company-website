@@ -1,20 +1,20 @@
-@import '../index';
+@use "../index" as *;
 
 .text-section-content {
-    margin: 0px;
+  margin: 0px;
 
-    font-size: var(--font-size-medium);
-    line-height: 29px;
+  font-size: var(--font-size-medium);
+  line-height: 29px;
+  img {
+    height: 17px;
+    margin-bottom: -2px;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: var(--font-size-large);
     img {
-        height: 17px;
-        margin-bottom: -2px;
+      height: 20px;
+      margin-bottom: -2px;
     }
-
-    @media(min-width: $breakpoint-medium) {
-        font-size: var(--font-size-large);
-        img {
-            height: 20px;
-            margin-bottom: -2px;
-        }
-    }
+  }
 }

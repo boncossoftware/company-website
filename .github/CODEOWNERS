@@ -1,0 +1,14 @@
+# Code Owners for Boncos Company Website
+
+# These owners will be automatically requested for review when someone opens a pull request
+
+# Default owners for everything in the repo
+
+- @boncossoftware/maintainers
+
+# Specific ownership for critical files
+
+/.github/ @boncossoftware/maintainers
+/app.yaml @boncossoftware/maintainers
+/vite.config.ts @boncossoftware/maintainers
+/package.json @boncossoftware/maintainers

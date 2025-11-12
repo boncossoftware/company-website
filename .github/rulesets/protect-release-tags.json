@@ -1,0 +1,37 @@
+{
+  "name": "Protect Release Tags",
+  "target": "tag",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": ["refs/tags/v*"]
+    }
+  },
+  "rules": [
+    {
+      "type": "creation",
+      "parameters": {
+        "restrict_creations": {
+          "restricted": true
+        }
+      }
+    },
+    {
+      "type": "update"
+    },
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "required_linear_history"
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 5,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    }
+  ]
+}

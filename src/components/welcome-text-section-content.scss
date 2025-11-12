@@ -1,22 +1,31 @@
-@import './header';
-@import '../index';
+@use "./header" as header;
+@use "../index" as *;
 
 .welcome-text-section-content {
-    font-size: 130pt;
-    margin: 0px;
-    
-    height: calc(100vh - calc(2 * #{$header-height-small}) - calc(3 * #{$padding-small}));
-    @media(min-width: $breakpoint-small) {
-        height: calc(100vh - calc(2 * #{$header-height-medium}) - calc(3 * #{$padding-medium}));
-    }
-    @media(min-width: $breakpoint-medium) {
-        height: calc(100vh - calc(2 * #{$header-height-large}) - calc(3 * #{$padding-large}));
-    }
-    max-height: 736px;
+  font-size: 130pt;
+  margin: 0px;
 
-    padding-bottom: $header-height-small;
+  height: calc(
+    100vh - calc(2 * #{header.$header-height-small}) -
+      calc(3 * #{$padding-small})
+  );
+  @media (min-width: $breakpoint-small) {
+    height: calc(
+      100vh - calc(2 * #{header.$header-height-medium}) -
+        calc(3 * #{$padding-medium})
+    );
+  }
+  @media (min-width: $breakpoint-medium) {
+    height: calc(
+      100vh - calc(2 * #{header.$header-height-large}) -
+        calc(3 * #{$padding-large})
+    );
+  }
+  max-height: 736px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding-bottom: header.$header-height-small;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
